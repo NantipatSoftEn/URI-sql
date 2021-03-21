@@ -28,3 +28,4 @@ where rentals.rentals_date>='2016-09-01' and rentals.rentals_date<='2016-09-30'
 
 2617 select pd.name, pv.name from products as pd, providers as pv where pd.id_providers = pv.id and pv.name = 'Ajax SA';
 2617 SELECT products.name,providers.name FROM providers join products on providers.id=products.id_providers where providers.name = 'Ajax SA'
+2618 SELECT products.name,providers.name,categories.name FROM products,providers,categories where products.id_providers = providers.id and products.id_categories = categories.id and  providers.name = 'Sansul SA' and categories.name = 'Imported'
