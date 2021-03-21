@@ -8,4 +8,4 @@ SELECT CAST(AVG(price) AS DECIMAL(10,2)) FROM products
 -- NUMER | SQL FORMAT
 
 
-SELECT categories.name, SUM(products.amount) FROM products join categories on products.id_categories = categories.id group by  categories.name;
+2609 SELECT categories.name, SUM(products.amount) FROM products join categories on products.id_categories = categories.id group by  categories.name;
