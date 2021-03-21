@@ -23,3 +23,8 @@ where rentals.rentals_date>='2016-09-01' and rentals.rentals_date<='2016-09-30'
 
 
 2615 SELECT DISTINCT customers.city from customers
+2616 select c.id, c.name from customers as c where c.id not in (select id_customers from locations);
+2616 SELECT customers.id,customers.name FROM customers where customers.id not in (SELECT locations.id_customers FROM locations)
+
+2617 select pd.name, pv.name from products as pd, providers as pv where pd.id_providers = pv.id and pv.name = 'Ajax SA';
+2617 SELECT products.name,providers.name FROM providers join products on providers.id=products.id_providers where providers.name = 'Ajax SA'
